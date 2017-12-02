@@ -1,0 +1,128 @@
+<script type="text/javascript" src="assets/plugins/web_qr/llqrcode.js"></script>
+<script type="text/javascript" src="assets/plugins/web_qr/webqr.js"></script>
+<style type="text/css">
+
+img{
+    border:0;
+}
+#main{
+    margin: 15px auto;
+    background:white;
+    overflow: auto;
+	width: 100%;
+}
+#header{
+    background:white;
+    margin-bottom:15px;
+}
+#mainbody{
+    background: white;
+    width:100%;
+	display:none;
+}
+#footer{
+    background:white;
+}
+#v{
+    width:320px;
+    height:240px;
+}
+#qr-canvas{
+    display:none;
+}
+#qrfile{
+    width:320px;
+    height:240px;
+}
+#mp1{
+    text-align:center;
+    font-size:50 px;
+}
+#imghelp{
+    position:relative;
+    left:0px;
+    top:-160px;
+    z-index:100;
+    font:18px arial,sans-serif;
+    background:#f0f0f0;
+	margin-left:35px;
+	margin-right:35px;
+	padding-top:10px;
+	padding-bottom:10px;
+	border-radius:20px;
+}
+.selector{
+    margin:0;
+    padding:0;
+    cursor:pointer;
+    margin-bottom:-5px;
+}
+#outdiv
+{
+    width:320px;
+    height:240px;
+	border: solid;
+	border-width: 3px 3px 3px 3px;
+}
+#result{
+    border: solid;
+	border-width: 1px 1px 1px 1px;
+	padding:20px;
+	width:70%;
+}
+
+
+
+#footer a{
+	color: black;
+}
+.tsel{
+    padding:0;
+}
+
+</style>
+
+
+
+
+
+<div id="main">
+<div id="header">
+<p id="mp1">
+QR Code scanner
+</p>
+
+</div>
+<div id="mainbody">
+<table class="tsel" border="0" width="100%">
+    <tr>
+    <td valign="top" align="center" width="50%">
+<table class="tsel" border="0">
+    <tr style="visibility: hidden;">
+    
+        <td><img class="selector" id="webcamimg" src="assets/plugins/web_qr/vid.png" onclick="setwebcam()" align="left" /></td>
+        <td><img class="selector" id="qrimg" src="assets/plugins/web_qr/cam.png" onclick="setimg()" align="right"/></td></tr>
+    <tr>
+        <td colspan="2" align="center">
+            <div id="outdiv">
+            </div>
+        </td>
+    </tr>
+</table>
+</td>
+</tr>
+
+    <tr>
+        <td colspan="3" align="center"></td>
+    </tr>
+</table>
+
+</div>&nbsp;
+
+
+</div>
+<canvas id="qr-canvas" width="800" height="600"></canvas>
+
+<script type="text/javascript">
+
+</script>
